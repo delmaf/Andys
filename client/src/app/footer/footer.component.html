@@ -1,0 +1,56 @@
+<footer class="footer">
+
+    <div class="footer_container_full">
+        <div class="footer_wrap">
+            <div class="fcontainer">
+                <div class="footer_content">
+
+                    <div class="footer_nav">
+                        <div *ngFor="let elem of fData" class="footer_nav_cat">
+                            <div class="footer_name_cat"> {{elem.title}} </div>
+                            <ul class="footer_nav_list">
+                                <li class="footer_nav_item">
+                                    <a href="" *ngFor="let item of elem.list" class="footer_nav_item"> {{item.name}} </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer_info">
+                        <div class="subscribe">
+                            <div class="subscribe_title">Подписаться на рассылку</div>
+                            <div class="subscribe_form">
+                                <input type="text" class="input_text" placeholder="Ваш email">
+                                <input type="submit" class="button_min" value="Subscribe">
+                            </div>
+                        </div>
+
+                        <div class="footer_add">
+                            <img src="https://andys.md/assets/img/pays.png">
+
+                            <a target="_blank" href="https://www.facebook.com/andysclubmd/">
+                                <img src="../../assets/svg/fb.svg" alt="fb" class="f_elem"/>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/andysclubmd/">
+                                <img src="../../assets/svg/insta.svg" alt="insta" class="f_elem"/>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/andysclubmd/">
+                                <img src="../../assets/svg/youtube.svg" alt="youtube" class="f_elem"/>
+                            </a>
+
+                        </div>
+
+                        <div class="footer_add">
+                            <div class="developed">
+                                <a href="https://www.ilab.md/ro/" target="_blank">Elaborarea siteului – CLOUD FOR PEOPLE</a>
+                                    <br>
+                                <a href="https://www.Midsun.md" target="_blank">Design efectuat de rOMA </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>

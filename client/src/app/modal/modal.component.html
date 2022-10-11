@@ -1,0 +1,49 @@
+<div class="modal_container"  >
+  <div #modal></div>
+  <div class="modal_product_content"
+  >
+
+    <div class="modal_product_img" [style.background]="'url('+body.bigImg+')'">
+      <!-- <img [src]="body.bigImg" alt="img"> -->
+    </div>
+
+    <div class="modalproduct_info">
+
+      <div class="modal_product_close" (click)="closeMe()">
+        <img src="../../assets/svg/close.svg" alt="close" />
+      </div>
+
+      <div class="prodinfo">
+
+        <div class="prodinfo_name">
+          {{body.name}}
+        </div>
+
+        <div class="prodinfo_about"> 
+          <p> {{body.name}} - Product info </p>
+        </div>
+
+        <div class="prodinfo_scroll"></div>
+
+        <div class="prodinfo_price">
+          <div>Valoarea comenzii:</div>
+
+          <div>
+            <span class="product_price"> {{body.price}} </span>
+            {{body.currency}}
+          </div>
+        </div>
+
+      </div>
+
+      <button class="button_add_to_cart" (click)="confirm()">În coș </button>
+
+    </div>
+
+
+    <!-- <div class="btn-container">
+      <button >close</button>
+      <button (click)="confirm()">Confirm</button>
+    </div> -->
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div *ngIf="menuData != undefined" class="product_slick_slide"> 
+
+    <div *ngFor="let elem of menuData" class="prod_container">
+
+        <div class="prod_title">   
+            <div style="padding-bottom: 20px;">
+                {{elem.title}}
+            </div> 
+            
+            <div>
+                 <!-- <a [routerLink]="['/menu']" [queryParams]="{title: elem.title}" class="nodecoration">SPRE MENIU {{elem.title}}</a> -->
+                <a class="nodecoration" (click)="navigate(elem.title)">SPRE MENIU {{elem.title}}</a>
+            </div>
+        </div>
+
+        <div style="display: flex;">
+
+
+        <div *ngFor="let item of elem.items" class="product_wrap">
+
+            <div class="product_img" (click)="openModal(elem.title, item)">
+                <img [src]="item.urlImg" alt="" style="border-radius: 7px;width: 100%;">
+            </div> 
+            <div #modal>
+
+            </div>
+
+            <div class="product_header">
+                {{item.name}}
+                <a href="">
+                    <img src="../../assets/svg/info.svg" alt="Andys" />
+                </a>
+            </div>
+
+            <div class="product_buy">
+                {{item.price}} {{item.currency}} 
+
+                    <span class="bag_icon">În coș </span>
+                    <img src="../../assets/svg/toBag.svg" alt="Andys" />
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>

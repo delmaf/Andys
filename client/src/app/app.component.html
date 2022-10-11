@@ -1,0 +1,105 @@
+<div class="container">
+  <!-- <div #modal></div> -->
+  <header class="header_container">
+    <div class="header_wrapper">
+      
+      <div class="header_content">
+
+        <div class="header_logo" >
+            <a [routerLink]="['/index']" class="nodecoration">
+              <img src="assets/svg/logo.svg" alt="Andys" />
+            </a>
+        </div>
+
+        <div class="header_menu">
+          <div class="header_addt">
+            <div class="selphonenum">
+                <div class="dropdown">
+                  <div class="dropdiv">{{selectedContact?.city}} {{selectedContact?.phoneNumber}}
+                  <div class="dropdown_content">
+                    <ul class="selphonenum_dropdown">
+
+                      <li *ngFor="let item of contacts; let idx = index" class="num_dropdown_item" (click)="setContact(idx)">
+                        <span class="city">{{item.city}}</span>  <span class="number">{{item.phoneNumber}} </span>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                </div>
+
+            </div>
+
+            <div class="brands_list">
+              <div *ngFor="let item of partnersLogo" class="brands_list_item">
+                <a [href]="item.redirectUrl" target="_blank">
+                  <img [src]="item.imgUrl" [alt]="item.alt">
+                </a>
+              </div>
+            </div>
+            
+            <ul class="adilinks">
+              <li *ngFor="let item of cornerElem" class="adilinks_item">
+                <a href="">{{item}}</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="header_main">
+
+            <div class="header_navbar">
+
+              <li *ngFor="let item of navItems" class="nav_items dropdown" >
+                <a [routerLink]="['']" class="nodecoration">{{item.title}}</a>
+
+              <div *ngIf="item.subMenu.length > 0" >
+                <div class="dropdown_content">
+                  <ul class="selphonenum_dropdown">
+
+                    <li *ngFor="let item of item.subMenu" class="num_dropdown_item" >
+                      <a (click)="navigate(item.title)">{{item.title}}</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+              </li>
+
+            </div>
+
+            <div class="header_login">
+              <a href="">Logare
+                <img src="assets/svg/login.svg" alt="login" />
+              </a>
+            </div>
+
+            <div class="header_bag">
+              <a href="">
+                <img src="assets/svg/bag.svg" alt="bag" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </header>
+
+  <div class="carousel_container">
+    <carousel >
+      <ng-container *ngFor="let item of slider" >
+        <ng-container *carouselItem>
+          <div class="item">
+            <img  [src]="item.img">
+          </div>
+        </ng-container>
+      </ng-container>
+    </carousel>
+  </div>
+  <app-menu-content [contentData]="content"></app-menu-content>
+</div>
+
+<app-footer [footerData]="footerItems"></app-footer>

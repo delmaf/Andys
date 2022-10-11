@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Lifehack';
+    src: url(../../assets/fonts/Lifehack.ttf) format("truetype");
+    font-weight:300;
+  }
+ 
+ .product_slick_slide{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    /* padding-left: 80px;
+    padding-right: 50px; */
+}
+
+.product_wrap{
+    width:220px;
+    position:relative;
+    padding:10px;
+    border:1px solid transparent;
+    border-radius:6px; 
+    transition: 0.6s;
+}
+
+.product_wrap:hover { border-color: yellow; }
+
+::ng-deep .product_img{
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.product_header{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 5px 0;
+    align-items: flex-start;
+    padding: 0 10px;
+    height: 40px;
+    align-items: center;
+    color: #fff;
+}
+
+.product_buy{
+    cursor: pointer;
+    border: 1px solid #c0a304;
+    border-radius: 6px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 10px;
+    transition: 0.6s;
+}
+
+.product_buy:hover {
+    background-color: #ffd806;
+}
+
+.bag_icon {
+    color:white;
+    font-weight: bold;
+    margin-left: 75px;
+    text-decoration: none;
+}
+
+.prod_container {
+    display: flex;
+    flex-flow:row wrap;
+    color:white;
+    /* margin-left: 50px; */
+    max-width: 1200px;
+}
+
+.prod_title{
+    display: flex;
+    max-width: 1210px;
+    width: 100%;
+    margin: 20px;
+    padding-top: 25px;
+    font-size: 2.375em;
+    font-family: Lifehack;
+    border-bottom: 1px solid #2c2c2c;
+    justify-content: space-between;
+
+}
+.nodecoration {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* .modal_container{
+    display: flex;
+    justify-content: center;
+} */
